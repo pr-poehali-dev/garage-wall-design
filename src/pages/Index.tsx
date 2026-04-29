@@ -150,11 +150,13 @@ export default function Index() {
             {/* Размеры */}
             <div className="bg-foreground p-10">
               <p className="text-xs tracking-[0.3em] uppercase text-white/40 mb-5">Размеры гаража</p>
-              <div className="flex items-end gap-3 mb-6">
-                <span className="font-display text-5xl font-light text-white">12,5</span>
-                <span className="font-display text-3xl font-light text-white/40 mb-1">×</span>
-                <span className="font-display text-5xl font-light text-white">3,5</span>
-                <span className="text-white/40 text-sm font-light mb-2">м</span>
+              <div className="flex items-end gap-2 mb-6">
+                <span className="font-display text-4xl font-light text-white">12,5</span>
+                <span className="font-display text-2xl font-light text-white/40 mb-0.5">×</span>
+                <span className="font-display text-4xl font-light text-white">3,5</span>
+                <span className="font-display text-2xl font-light text-white/40 mb-0.5">×</span>
+                <span className="font-display text-4xl font-light text-white">2,5</span>
+                <span className="text-white/40 text-sm font-light mb-1">м</span>
               </div>
               <div className="space-y-2">
                 <div className="flex justify-between text-sm">
@@ -165,20 +167,29 @@ export default function Index() {
                   <span className="text-white/40 font-light">Ширина</span>
                   <span className="text-white font-medium">3,5 м</span>
                 </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-white/40 font-light">Высота потолка</span>
+                  <span className="text-white font-medium">2,5 м</span>
+                </div>
               </div>
             </div>
 
             {/* Площадь и периметр */}
             <div className="bg-foreground p-10 border-l border-white/10">
               <p className="text-xs tracking-[0.3em] uppercase text-white/40 mb-5">Площади</p>
-              <div className="space-y-5">
+              <div className="space-y-4">
                 <div>
                   <div className="font-display text-4xl font-light text-gold">43,75 м²</div>
                   <div className="text-white/40 text-xs mt-1 tracking-wide">Площадь пола</div>
                 </div>
                 <div className="h-px bg-white/10" />
                 <div>
-                  <div className="font-display text-3xl font-light text-white">32 м</div>
+                  <div className="font-display text-3xl font-light text-white">80 м²</div>
+                  <div className="text-white/40 text-xs mt-1 tracking-wide">Площадь стен (под покраску)</div>
+                </div>
+                <div className="h-px bg-white/10" />
+                <div>
+                  <div className="font-display text-2xl font-light text-white/60">32 м</div>
                   <div className="text-white/40 text-xs mt-1 tracking-wide">Периметр (для LED-ленты)</div>
                 </div>
               </div>
@@ -189,8 +200,9 @@ export default function Index() {
               <p className="text-xs tracking-[0.3em] uppercase text-white/40 mb-5">Расчёт материалов</p>
               <div className="space-y-3">
                 {[
-                  { label: "Эпоксидный праймер", val: "~53 кг", note: "грунт 1,2 кг/м²" },
-                  { label: "Финишный состав", val: "~88 кг", note: "2 кг/м²" },
+                  { label: "Эпоксидный праймер", val: "~53 кг", note: "пол, грунт 1,2 кг/м²" },
+                  { label: "Финишный состав", val: "~88 кг", note: "пол, 2 кг/м²" },
+                  { label: "Краска для стен", val: "~24 кг", note: "стены, 0,3 кг/м² × 2 слоя" },
                   { label: "LED-лента периметр", val: "~35 м", note: "+ запас 10%" },
                   { label: "Споты накладные", val: "6–8 шт", note: "500 лк / 5–6 м²" },
                 ].map((r) => (
